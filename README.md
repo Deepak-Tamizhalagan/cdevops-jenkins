@@ -13,7 +13,7 @@ In assignment 3 you added gitea to your kubernetes cluster
 
 ```mermaid
     C4Deployment
-    title Deployment Diagram for private CI/CD pipeline for atomic crm
+    title Deployment Diagram for private CI/CD pipeline for crm
 
     Deployment_Node(truenas, "Truenas Instance on VSPHERE", "truenas", "10.172.27.6 (in my case)"){
         Container(nfs, "block storage", "nfs","application pool")
