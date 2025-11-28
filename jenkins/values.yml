@@ -1,0 +1,13 @@
+controller:
+  adminUser: "admin"
+  adminPassword: "admin123"
+  serviceType: "ClusterIP"
+  servicePort: 8080
+
+persistence:
+  enabled: true
+  storageClass: "standard"
+  size: "8Gi"
+
+serviceAccount:
+  create: true

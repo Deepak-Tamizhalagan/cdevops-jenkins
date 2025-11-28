@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Install required Python modules
+      pip:
+        name:
+          - kubernetes
+          - openshift
+        state: present
+
+    - name: Add Jenkins Helm repo
+      kubernetes.core.helm_repository:
+        name: jenkins
+        repo_url: "https://charts.jenkins.io"
+
+    - name: Create Jenkins namespace
+      kubernetes.core.k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Namespace
+          metadata:
+            name: jenkins
+
+    - name: Deploy Jenkins using Helm
+      kubernetes.core.helm:
+        name: jenkins
+        chart_ref: jenkins/jenkins
+        release_namespace: jenkins
+        values_files:
+          - values.yaml
