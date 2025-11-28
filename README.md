@@ -50,3 +50,37 @@ To remove all resources from the cluster:
 ```
 ansible-playbook jenkins/down.yml
 ```
+# Sample CI Pipeline Project
+
+This project is used to verify Jenkins pipeline functionality as per Assignment 4 requirements.
+
+## Purpose
+The Jenkinsfile demonstrates a simple CI workflow executed inside Jenkins once integrated with GitHub and Gitea.
+
+## Pipeline Stages
+- *Checkout* – Retrieves source code
+- *Build* – Simulates application build
+- *Test* – Runs basic test output
+
+## Integration Instructions
+1. Push this folder as a separate repository in GitHub.
+2. Also push to Gitea (http://gitea.placeholder.local) as required.
+3. In Jenkins:
+   - Create a new pipeline job.
+   - Configure SCM connection (GitHub/Gitea link).
+   - Ensure Jenkins triggers a build on push or run manually.
+
+## Notes
+- This sample app does not require any runtime environment.
+- The Jenkinsfile is intentionally minimal and structured for demonstration.
+- Ideal for testing pipeline setup, SCM integration, and Jenkins configuration.
+
+---
+
+### Contribution
+Prepared by *Cibi Sharan*  
+Responsible for:
+- Creating the CI test project
+- Writing the Jenkinsfile
+- Documenting pipeline flow
+- Assisting with integration configuration
