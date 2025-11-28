@@ -64,6 +64,9 @@ The Jenkinsfile demonstrates a simple CI workflow executed inside Jenkins once i
 
 ## Integration Instructions
 1. Push this folder as a separate repository in GitHub.
+```bash
+https://github.com/Cibi619/test-jenkins.git
+```
 2. Also push to Gitea (http://gitea.placeholder.local) as required.
 3. In Jenkins:
    - Create a new pipeline job.
