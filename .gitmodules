@@ -1,0 +1,3 @@
+[submodule "test-jenkins"]
+	path = test-jenkins
+	url = git@github.com:Cibi619/test-jenkins.git
